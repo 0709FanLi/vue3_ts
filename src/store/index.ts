@@ -4,7 +4,7 @@ import { Product } from '../interface'
 
 export interface State {
   shoppingCart: Product[], //  这是个数组
-  routerNames: string[]
+  routerPathes: string[]
 }
 
 //  创建唯一类型key
@@ -14,7 +14,7 @@ export const key: InjectionKey<Store<State>> = Symbol()
 export const store = createStore<State>({
   state: {
     shoppingCart: [],
-    routerNames:['Home','Shopping']
+    routerPathes:['/','shopping']
   },
   getters: {
     isInCart: function (state) {
