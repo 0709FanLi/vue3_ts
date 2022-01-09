@@ -3,7 +3,8 @@ import { createStore, useStore as baseUseStore, Store } from 'vuex'
 import { Product } from '../interface'
 
 export interface State {
-  shoppingCart: Product[] //  这是个数组
+  shoppingCart: Product[], //  这是个数组
+  routerNames: string[]
 }
 
 //  创建唯一类型key
@@ -12,7 +13,8 @@ export const key: InjectionKey<Store<State>> = Symbol()
 
 export const store = createStore<State>({
   state: {
-    shoppingCart: []
+    shoppingCart: [],
+    routerNames:['Home','Shopping']
   },
   getters: {
     isInCart: function (state) {

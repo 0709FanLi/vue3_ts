@@ -2,9 +2,15 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Shopping from '@/views/shoppingCart/index.vue'
 import Product from '@/views/shoppingCart/product.vue'
 import ShoppingCart from '@/views/shoppingCart/shoppingCart.vue'
+import Home from '@/views/home.vue'
 
 
 const routes: Array<RouteRecordRaw> = [
+  {
+    path:'',
+    name:'Home',
+    component:Home
+  },
   {
     path: '/shopping',
     name: 'Shopping',

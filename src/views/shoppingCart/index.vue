@@ -15,7 +15,6 @@ const cartGoodsCount = computed((): number => {
   return store.state.shoppingCart.length
 })
 const activeRouteName = computed((): string => {
-  console.log('route.name', route.name)
   return route.name?.toString() || ''
 })
 </script>

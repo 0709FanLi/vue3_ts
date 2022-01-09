@@ -1,9 +1,13 @@
 <template>
-  <h1>home</h1>
+  <h1 v-for="(item,key) in routerNames" :key="key">{{item}}</h1>
 </template>
 
-<script>
-export default {
-  setup() {}
-}
+<script setup lang="ts">
+import { useStore } from '@/store'
+import { computed } from 'vue';
+
+const store = useStore();
+
+const routerNames = computed(():string[]=>store.state.routerNames)
+
 </script>
