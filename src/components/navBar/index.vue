@@ -1,10 +1,10 @@
 <template>
   <div class="nav-bar">
-    <router-link to="/" :class="{ activeRouteName: activeRouteName === 'Product' }">
+    <router-link to="/shopping/product" :class="{ activeRouteName: activeRouteName === 'Product' }">
       商品列表
     </router-link>
     <router-link
-      to="/shoppingCart"
+      to="/shopping/shoppingCart"
       :class="{ activeRouteName: activeRouteName === 'ShoppingCart' }"
     >
       购物车({{ cartGoodsCount }})
