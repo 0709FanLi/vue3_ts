@@ -3,31 +3,36 @@ import Shopping from '@/views/shoppingCart/index.vue'
 import Product from '@/views/shoppingCart/product.vue'
 import ShoppingCart from '@/views/shoppingCart/shoppingCart.vue'
 import Home from '@/views/home.vue'
-
+import DayKnowledgeWeb from '@/views/dkw.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path:'/',
-    name:'Home',
-    component:Home
+    path: '/',
+    name: 'Home',
+    component: Home
   },
   {
     path: '/shopping',
     name: 'Shopping',
     component: Shopping,
-    children:[
+    children: [
       {
         path: 'product',
         name: 'Product',
-        component: Product,
+        component: Product
       },
       {
         path: 'shoppingCart',
         name: 'ShoppingCart',
-        component: ShoppingCart,
-      },
+        component: ShoppingCart
+      }
     ]
   },
+  {
+    path: '/5dkw',
+    name: '5dkw',
+    component: DayKnowledgeWeb
+  }
 ]
 
 const router = createRouter({
