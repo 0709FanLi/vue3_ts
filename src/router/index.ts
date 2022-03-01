@@ -4,6 +4,7 @@ import Product from '@/views/shoppingCart/product.vue'
 import ShoppingCart from '@/views/shoppingCart/shoppingCart.vue'
 import Home from '@/views/home.vue'
 import DayKnowledgeWeb from '@/views/dkw.vue'
+import Article from '@/views/article.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -32,6 +33,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/5dkw',
     name: '5dkw',
     component: DayKnowledgeWeb
+  },
+  {
+    path: '/article',
+    name: 'article',
+    component: Article
   }
 ]
 
