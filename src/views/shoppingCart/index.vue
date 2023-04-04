@@ -17,4 +17,5 @@ const cartGoodsCount = computed((): number => {
 const activeRouteName = computed((): string => {
   return route.name?.toString() || ''
 })
+
 </script>

@@ -1,33 +1,27 @@
 <template>
   <div class="box">
-    <el-card
-      shadow="hover"
-      v-for="(item,key) in routerPathes"
-      :key="key"
-      class="box-card"
-    >
-      <router-link :to="item">{{item}}</router-link>
+    <dd-button theme="success">hello world</dd-button>
+    <el-card shadow="hover" v-for="(item, key) in routerPathes" :key="key" class="box-card">
+      <router-link :to="item">{{ item }}</router-link>
     </el-card>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useStore } from '@/store'
-import { computed } from 'vue';
+import { computed } from 'vue'
 
-const store = useStore();
+const store = useStore()
 
-const routerPathes = computed(():string[]=>store.state.routerPathes)
-
+const routerPathes = computed((): string[] => store.state.routerPathes)
 </script>
 <style>
-.box{
+.box {
   padding: 20px;
 }
-.box-card{
+.box-card {
   display: inline-block;
   margin-left: 30px;
-  float:left;
+  float: left;
 }
-
 </style>
